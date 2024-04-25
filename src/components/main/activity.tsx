@@ -41,7 +41,7 @@ const AnimatedCountdown = () => {
   };
 
   return (
-    <div className="w-full h-fit xs:px-[10px] lg:px-[100px] pb-[75px] flex-col justify-start items-center gap-[29px] inline-flex">
+    <div className="w-full h-fit xs:px-[10px] lg:px-[100px] pb-[175px] flex-col justify-start items-center gap-[29px] inline-flex">
       <div className="text-center text-black xs:text-[45px] lg:text-[65px] font-normal font-blackops">
         NEXT MISSION
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import CountdownTimer from "../reusable/countdown-timer";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -61,10 +62,34 @@ const Hero = () => {
         4 TEAMS
       </div>
       <div className="justify-center flex-wrap items-center gap-5 inline-flex">
-        <div className="w-[250px] h-[250px] bg-yellow-400 rounded-full border border-black" />
-        <div className="w-[250px] h-[250px] bg-red-600 rounded-full border border-black" />
-        <div className="w-[250px] h-[250px] bg-blue-700 rounded-full border border-black" />
-        <div className="w-[250px] h-[250px] bg-green-500 rounded-full border border-black" />
+        <Image
+          src={"/images/yellow_con.png"}
+          width={1000}
+          height={1000}
+          alt="yellow"
+          className="w-[250px] h-[250px] rounded-full bg-[#d0d0d0]"
+        />
+        <Image
+          src={"/images/red_con.png"}
+          width={1000}
+          height={1000}
+          alt="red"
+          className="w-[250px] h-[250px] rounded-full bg-[#d0d0d0]"
+        />
+        <Image
+          src={"/images/blue_con.png"}
+          width={1000}
+          height={1000}
+          alt="blue"
+          className="w-[250px] h-[250px] rounded-full bg-[#d0d0d0]"
+        />
+        <Image
+          src={"/images/green_con.png"}
+          width={1000}
+          height={1000}
+          alt="green"
+          className="w-[250px] h-[250px] rounded-full bg-[#d0d0d0]"
+        />
       </div>
       <div className="text-center">
         <span className="text-black hover:text-yellow-500 xs:text-[25px] lg:text-[35px] font-normal  underline">
