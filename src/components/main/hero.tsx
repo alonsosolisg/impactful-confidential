@@ -2,7 +2,11 @@ import React from "react";
 import CountdownTimer from "../reusable/countdown-timer";
 import Image from "next/image";
 
-const Hero = () => {
+const Hero = ({
+  setToggleRsvpPopup,
+}: {
+  setToggleRsvpPopup: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <div className="w-full h-fit xs:px-4 lg:px-[150px] pt-20 pb-[125px] flex-col justify-center items-center gap-5 inline-flex">
       <div className="justify-center flex-wrap items-center gap-2.5 inline-flex">
@@ -51,7 +55,7 @@ const Hero = () => {
         </div>
         <button
           onClick={() => {
-            console.log("RSVP button clicked");
+            setToggleRsvpPopup(true);
           }}
           className="px-[85px] bg-stone-900 rounded-[10px] justify-center items-center gap-2.5 inline-flex hover:scale-105 hover:bg-red-500 hover:text-black transition-all"
         >
