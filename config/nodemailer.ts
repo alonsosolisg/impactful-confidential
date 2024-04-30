@@ -1,8 +1,8 @@
 const nodemailer = require("nodemailer");
 
-const email = process.env.NEXT_PUBLIC_EMAIL;
-const emailPassword = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-const emailTo = process.env.NEXT_PUBLIC_EMAIL_TO;
+const email = process.env.EMAIL;
+const emailPassword = process.env.EMAIL_PASSWORD;
+const emailTo = process.env.EMAIL_TO;
 
 export const transporter = nodemailer.createTransport({
   service: "Outlook",

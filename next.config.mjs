@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    NEXT_PUBLIC_EMAIL: process.env.EMAIL,
-    NEXT_PUBLIC_EMAIL_TO: process.env.EMAIL_TO,
-    NEXT_PUBLIC_EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
+    EMAIL: process.env.EMAIL,
+    EMAIL_TO: process.env.EMAIL_TO,
+    EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
   },
 };
 
