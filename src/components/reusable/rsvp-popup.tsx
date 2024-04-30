@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const RsvpPopup = ({
   toggleRsvpPopup,
@@ -71,9 +72,25 @@ const RsvpPopup = ({
           X
         </div>
         <h1 className="text-3xl">Confirm Your Attendance</h1>
+        {loading && (
+          <CirclesWithBar
+            height="100"
+            width="100"
+            color="#000000"
+            outerCircleColor="#000000"
+            innerCircleColor="#000000"
+            barColor="#000000"
+            ariaLabel="circles-with-bar-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        )}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col justify-center w-[75%] items-center gap-4"
+          className={`flex-col justify-center w-[75%] items-center gap-4 ${
+            loading ? "hidden" : "flex"
+          }`}
         >
           <input
             type="text"
