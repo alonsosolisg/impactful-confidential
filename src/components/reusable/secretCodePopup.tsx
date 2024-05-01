@@ -18,6 +18,8 @@ const SecretCodePopup = ({
           ? "aggressiveGreen"
           : color === "red"
           ? "aggressiveRed"
+          : color === "blue"
+          ? "aggressiveBlue"
           : "aggressiveBlue"
       }`}
       onClick={closePopup}

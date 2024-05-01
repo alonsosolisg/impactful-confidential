@@ -5,10 +5,10 @@ import RsvpPopup from "@/components/reusable/rsvp-popup";
 import SecretCodePopup from "@/components/reusable/secretCodePopup";
 import { useState } from "react";
 
-const yellowCode = process.env.NEXT_PUBLIC_YELLOW_CODE as string;
-const greenCode = process.env.NEXT_PUBLIC_GREEN_CODE as string;
-const redCode = process.env.NEXT_PUBLIC_RED_CODE as string;
-const blueCode = process.env.NEXT_PUBLIC_BLUE_CODE as string;
+const yellowCode = "1NV3ST1NG";
+const greenCode = "M0N3Y";
+const redCode = "PR0F1T";
+const blueCode = "N3TW0RK";
 
 export default function Home() {
   const [toggleRsvpPopup, setToggleRsvpPopup] = useState(false);

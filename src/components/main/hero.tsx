@@ -28,10 +28,10 @@ const Hero = ({
       <div className="justify-center flex-wrap items-center gap-2.5 inline-flex">
         <div
           onClick={() => {
-            setRedClue({ ...blueClue, 4: !redClue[4] });
+            setBlueClue({ ...blueClue, 4: !blueClue[4] });
           }}
           className={`text-black xs:text-5xl lg:text-6xl font-normal font-blackops ${
-            redClue[4] ? "text-blue-500" : "text-black"
+            blueClue[4] ? "text-blue-500" : "text-black"
           }`}
         >
           IMPACTFUL
