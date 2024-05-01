@@ -5,3 +5,115 @@
 body {
   background-image: url("/images/background.jpg");
 }
+
+@keyframes yellowGradientAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(120%);
+  }
+  25% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+  50% {
+    filter: brightness(120%);
+    background-position: 100% 50%;
+  }
+  75% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+}
+
+.aggressiveYellow {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background: linear-gradient(45deg, #ffea00, #fffd47, #ffff00, #ffea00);
+  background-size: 200% 200%;
+  animation: yellowGradientAnimation 1s linear infinite;
+}
+
+@keyframes greenGradientAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(120%);
+  }
+  25% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+  50% {
+    filter: brightness(120%);
+    background-position: 100% 50%;
+  }
+  75% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+}
+
+.aggressiveGreen {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #00ff00, #007700, #00cc00, #00ff00);
+  background-size: 200% 200%;
+  animation: greenGradientAnimation 1s linear infinite;
+}
+
+@keyframes redGradientAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(120%);
+  }
+  25% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+  50% {
+    filter: brightness(120%);
+    background-position: 100% 50%;
+  }
+  75% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+}
+
+.aggressiveRed {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #ff0000, #880000, #cc0000, #ff0000);
+  background-size: 200% 200%;
+  animation: redGradientAnimation 1s linear infinite;
+}
+
+@keyframes blueGradientAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(120%);
+  }
+  25% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+  50% {
+    filter: brightness(120%);
+    background-position: 100% 50%;
+  }
+  75% {
+    filter: brightness(150%);
+    background-position: 50% 50%;
+  }
+}
+
+.aggressiveBlue {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #0000ff, #000088, #0000cc, #0000ff);
+  background-size: 200% 200%;
+  animation: blueGradientAnimation 1s linear infinite;
+}
