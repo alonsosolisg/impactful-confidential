@@ -47,6 +47,24 @@ const Hero = ({
           ENTREPRENEURSHIP
         </div>
       </div>
+      <div className="flex gap-8">
+        <button
+          onClick={() => {
+            window.location.href = "#scores";
+          }}
+          className="text-white rounded-md hover:scale-105 transition-all bg-black px-4 py-1 text-xl font-medium"
+        >
+          Check Team Scores
+        </button>
+        <button
+          onClick={() => {
+            window.location.href = "#points";
+          }}
+          className="text-white rounded-md hover:scale-105 transition-all bg-black px-4 py-1 text-xl font-medium"
+        >
+          Events and Points
+        </button>
+      </div>
       <div className="w-full h-px relative bg-stone-900 rounded-[100px]" />
       <div className="self-stretch xs:px-[10px] lg:px-[100px] py-5 justify-center items-center gap-2.5 inline-flex">
         <div className="grow justify-center items-center flex flex-wrap shrink basis-0 text-center">

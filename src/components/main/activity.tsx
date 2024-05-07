@@ -1,57 +1,73 @@
-import React, { useState, useEffect } from "react";
+// pages/competition.jsx
 
-const AnimatedCountdown = () => {
-  const targetDate = new Date("May 1, 2024 14:00:00").getTime();
+import React from "react";
 
-  const [currentTime, setCurrentTime] = useState(() => new Date().getTime());
+const Competition = () => {
+  // Define competition events
+  const events = [
+    {
+      title: "Musical Chairs",
+      description: "Winner: 100 points to the team of the last member sitting.",
+    },
+    {
+      title: "Push-Ups Under One Minute",
+      description:
+        "1st Place: 100 points\n2nd Place: 70 points\n3rd Place: 50 points\n(Points awarded based on the total count of push-ups by the top performer in each team)",
+    },
+    {
+      title: "Hula Hoop Challenge",
+      description:
+        "Fastest Team to Rotate Through All Members:\n1st Place: 150 points\n2nd Place: 100 points\n3rd Place: 50 points",
+    },
+    {
+      title: "Balance and Coordination (Egg Challenge)",
+      description:
+        "Team Completion: 200 points awarded only if all team members successfully complete the track without dropping the egg.\n(The entire team must successfully pass the egg along the track without any drops to earn points)",
+    },
+    {
+      title: "Tug of War",
+      description:
+        "Winner: 200 points to the team that does not cross the middle mark.",
+    },
+    {
+      title: "Feet Tied Race",
+      description:
+        "Fastest Pair to Complete the Course:\n1st Place: 120 points\n2nd Place: 80 points\n3rd Place: 40 points",
+    },
+    {
+      title: "Potato Sack Challenge",
+      description:
+        "Fastest Team to Complete the Circuit and Return:\n1st Place: 100 points\n2nd Place: 70 points\n3rd Place: 50 points",
+    },
+    {
+      title: "Team Spirit Award",
+      description:
+        "Team Spirit Award: 100 points awarded to the team that shows the best teamwork, enthusiasm, and sportsmanship throughout the event.",
+    },
+  ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date().getTime());
-    }, 1); // Update every millisecond
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const getTimeLeft = () => {
-    const timeLeft = targetDate - currentTime;
-    if (timeLeft <= 0) {
-      return "00 . 00 . 0000";
-    }
-
-    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-    const seconds = Math.floor((timeLeft / 1000) % 60);
-
-    // Add glitch effect by randomizing visible digits
-    const hoursGlitch = hours
-      .toString()
-      .padStart(2, "0")
-      .replace(/\d/g, (digit) => (Math.random() > 0.5 ? digit : "?"));
-    const minutesGlitch = minutes
-      .toString()
-      .padStart(2, "0")
-      .replace(/\d/g, (digit) => (Math.random() > 0.5 ? digit : "?"));
-    const secondsGlitch = seconds
-      .toString()
-      .padStart(2, "0")
-      .replace(/\d/g, (digit) => (Math.random() > 0.5 ? digit : "?"));
-
-    return `${hoursGlitch} . ${minutesGlitch} . ${secondsGlitch}`;
-  };
-
+  // Render the events in a list
   return (
-    <div className="w-full h-fit xs:px-[10px] lg:px-[100px] pb-[175px] flex-col justify-start items-center gap-[29px] inline-flex">
-      <div className="text-center text-black xs:text-[45px] lg:text-[65px] font-normal font-blackops">
-        NEXT MISSION
-      </div>
-      <div className="px-20 xs:py-[15px] lg:py-[25px] bg-stone-900 rounded-[10px] shadow justify-center items-center gap-2.5 inline-flex">
-        <div className="text-center text-white xs:text-[30px] md:text-[40px] lg:text-[65px] font-normal font-blackops">
-          {getTimeLeft()}
+    <div
+      id="points"
+      className="max-w-2xl my-20 mx-auto p-6 bg-white/20 rounded-lg shadow-lg"
+    >
+      <h1 className="text-center text-2xl font-bold mb-6 text-gray-800">
+        Competition Events and Points
+      </h1>
+      {events.map((event, index) => (
+        <div
+          key={index}
+          className="mb-8 p-4 bg-black border border-gray-300 rounded-lg shadow-sm"
+        >
+          <h2 className="text-xl font-semibold text-blue-700 mb-3">
+            {event.title}
+          </h2>
+          <p className="text-white whitespace-pre-line">{event.description}</p>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
 
-export default AnimatedCountdown;
+export default Competition;

@@ -1,5 +1,7 @@
+import Competition from "@/components/main/activity";
 import Activity from "@/components/main/activity";
 import Hero from "@/components/main/hero";
+import Scoreboard from "@/components/main/scoreboard";
 import Topbar from "@/components/main/topbar";
 import RsvpPopup from "@/components/reusable/rsvp-popup";
 import SecretCodePopup from "@/components/reusable/secretCodePopup";
@@ -114,7 +116,8 @@ export default function Home() {
         yellowClue={yellowClue}
         setYellowClue={setYellowClue}
       />
-      <Activity />
+      <Scoreboard />
+      <Competition />
     </main>
   );
 }
