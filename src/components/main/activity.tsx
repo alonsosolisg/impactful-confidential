@@ -58,12 +58,12 @@ const Competition = () => {
       {events.map((event, index) => (
         <div
           key={index}
-          className="mb-8 p-4 bg-black border border-gray-300 rounded-lg shadow-sm"
+          className="mb-8 p-4 bg-white/40 border border-gray-300 rounded-lg shadow-sm"
         >
-          <h2 className="text-xl font-semibold text-blue-700 mb-3">
+          <h2 className="text-xl font-semibold text-gray-800 mb-3">
             {event.title}
           </h2>
-          <p className="text-white whitespace-pre-line">{event.description}</p>
+          <p className="text-black whitespace-pre-line">{event.description}</p>
         </div>
       ))}
     </div>
